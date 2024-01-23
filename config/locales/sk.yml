@@ -1,0 +1,7 @@
+sk:
+  auth:
+    register: "registrácia"
+    username: "prihlasovacie meno"
+    email: "prihlasovacie meno"
+    password: "registrácia"
+    password_confirm: "registrácia"
