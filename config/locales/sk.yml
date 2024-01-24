@@ -1,7 +1,30 @@
 sk:
+  save: "uložiť"
+  show: "zobraziť"
+  options: "možnosti"
+  edit: "upraviť"
+  delete: "vymazať"
+  back: "späť"
+  next: "ďalej"
+  page: "strana"
+  description: "popis"
+  
   auth:
     register: "registrácia"
     username: "prihlasovacie meno"
-    email: "prihlasovacie meno"
-    password: "registrácia"
-    password_confirm: "registrácia"
+    email: "emailová adresa"
+    password: "heslo"
+    password_confirm: "heslo znovu"
+    login: "prihlásiť"
+    remember_me: "zapamätať si ma"
+  
+  permission:
+    permission: "povolenie"
+    title: "názov povolenia"
+    main_title: "sekcia povolenia"
+    key: "kľúč"
+    show_admin_link: "link v admin"
+  
+  group:
+    title: názov skupiny
+    description: "popis skupiny"

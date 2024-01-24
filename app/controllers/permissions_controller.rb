@@ -4,6 +4,7 @@ class PermissionsController < ApplicationController
   # GET /permissions or /permissions.json
   def index
     @permissions = Permission.all
+    @permission = Permission.new
   end
 
   # GET /permissions/1 or /permissions/1.json

@@ -1,25 +1,32 @@
-<h2>Log in</h2>
+<h2<%= t("auth.login").capitalize %></h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
+  <div class="form-field">
+    <%= f.label :email, t("auth.email").capitalize, class: "form-label" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
+  <div class="form-field">
+    <%= f.label :password, t("auth.password").capitalize, class: "form-label" %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
+    <div class="form-field">
+      <%= f.check_box :remember_me, class:"form-checkbox" %>
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <% if devise_mapping.rememberable? %>
+    <div class="form-check">
+      <%= f.check_box :remember_me, class: "form-check-input", id: "remember_me" %>
+      <label class="form-check-label" for="remember_me">
+        t("auth.remember_me")
+      </label>
+    </div>
+  <% end %>
+  <div class="form-field">
+    <%= f.submit t("auth.login").upcase, class: "btn btn-primary" %>
   </div>
 <% end %>
 
