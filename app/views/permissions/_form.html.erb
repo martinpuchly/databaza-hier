@@ -11,30 +11,37 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
 
-  <div>
-    <%= form.label :main_title, style: "display: block" %>
-    <%= form.text_field :main_title %>
-  </div>
+  <div class="row">
 
-  <div>
-    <%= form.label :key, style: "display: block" %>
-    <%= form.text_field :key %>
-  </div>
+    <div class="col-4 form-group">
+        <%= form.label :title, t("permission.title"), class: "form-label", style: "display: block" %>
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
+      <div class="col-4 form-group">
+        <%= form.label :main_title, t("permission.main_title"), class: "form-label", style: "display: block" %>
+        <%= form.text_field :main_title, class: "form-control" %>
+      </div>
+      <div class="col-4 form-group">
+        <%= form.label :key, t("permission.key"), class: "form-label", style: "display: block" %>
+        <%= form.text_field :key, class: "form-control" %>
+      </div>
+    </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div>
-    <%= form.label :show_admin_link, style: "display: block" %>
-    <%= form.check_box :show_admin_link %>
-  </div>
+    <div class="row">
+      <div class="col-4 form-group">
+        <%= form.label :route, t("permission.route"), class: "form-label", style: "display: block" %>
+        <%= form.text_field :route, class: "form-control" %>
+      </div>
+      <div class="col-4 form-group">
+      <%= form.label :description, t("permission.description"), class: "form-label", style: "display: block" %>
+      <%= form.text_field :description, class: "form-control" %>
+      </div>
+      <div class="col-4 form-group">
+        <%= form.label :show_admin_link, t("permission.show_admin_link"), class: "form-label", style: "display: block" %>
+        <%= form.check_box :show_admin_link, class: "form-check-input" %>
+      </div>
+    </div>
 
   <div>
     <%= form.submit %>
